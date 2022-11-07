@@ -1,0 +1,11 @@
+@use '/src/scss/theme/theme';
+
+.view {
+    width: 100%;
+    height: 100%;
+    background-color: theme.$background-color-faded;
+}
+
+.shadow-component {
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+}

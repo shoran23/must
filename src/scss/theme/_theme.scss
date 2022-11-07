@@ -1,0 +1,17 @@
+$background-color-faded: rgba(69,69,69,0.2);
+$background-color: rgb(69,69,69);
+
+$button-grey: #707070;
+$button-blue: #4786FE;
+
+%component {
+    border-radius: 20px;
+    box-shadow: 6px 6px 12px rgba(0,0,0,0.4);
+    border: none;
+}
+
+.component {
+    border-radius: 20px;
+    box-shadow: 6px 6px 12px rgba(0,0,0,0.4);
+    border: none;
+}

@@ -1,0 +1,107 @@
+.guitar {
+  width: 100%;
+  aspect-ratio: 6.8;
+  position: relative;
+
+
+  .guitar-fretboard {
+    width: 100%;
+    height: 94%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background: radial-gradient(#a0856a, #9b8268, #6a5d50);
+  }
+
+  .guitar-fretboard-binding {
+    width: 100%;
+    height: 3%;
+    background-color: #ddd7cd;
+    border: 1px solid #707070;
+  }
+
+  .guitar-fret {
+    width: 0.4%;
+    height: 104%;
+    background-color: #e2e2e2;
+    border: 1px solid #707070;
+    border-radius: 10px;
+  }
+
+  .guitar-fretboard-dot-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .guitar-fretboard-dot {
+    width: 40%;
+    aspect-ratio: 1;
+    background-color: white;
+    border-radius: 100px;
+    border: 0.5px solid rgba(0,0,0,0.4);
+  }
+
+  .guitar-fretboard-nut {
+    width: 2%;
+    height: 98%;
+    background-color: #DDD7CD;
+    border: 2px solid #BAB5AB;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+  }
+
+  .guitar-fretboard-nut-string-groove {
+    width: 100%;
+    height: 3%;
+    background-color: rgba(3,3,3,0.6);
+  }
+
+  .guitar-string-container {
+    width: 100%;
+    height: 91.5%;
+    top: 0;
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 0.75%;
+    padding-bottom: 4%;
+    padding-left: 2%;
+
+    .guitar-string {
+      width: 97.95%;
+      background: linear-gradient(to left, #E1C16E, #897540, #E1C16E, #897540);
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+
+      .guitar-note {
+        height: 400%;
+        aspect-ratio: 1;
+        border-radius: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        background-color: transparent;
+      }
+
+      .guitar-note:active {
+        background-color: rgba(255,255,255,0.2);
+      }
+
+    }
+  }
+}
