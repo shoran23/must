@@ -7,8 +7,13 @@ import '../scss/components/keyboard.scss'
 import '../scss/components/guitar.scss'
 import '../scss/theme/shadows.scss'
 
+import '../scss/components/form-input.scss'
+
 import '../scss/views/view.scss'
 import '../scss/views/login.scss'
+import '../scss/views/sign-up.scss'
+
+
 
 
 

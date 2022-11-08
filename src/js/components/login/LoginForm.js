@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import { faUser, faKey } from '@fortawesome/free-solid-svg-icons'
+import { useNavigate } from 'react-router-dom'
 
 import LoginInput from './LoginInput'
 
 export default function LoginForm() {
+    const navigate = useNavigate()
     const [userName, setUserName] = useState('')
     const [password, setPassword] = useState('')
     const [passwordType, setPasswordType] = useState('password')
@@ -16,14 +18,12 @@ export default function LoginForm() {
         }
     }
 
-    console.log('passwordType = ',passwordType)
-
     return (
         <div id='login-form'>
             <LoginInput
                 // states
                 icon={faUser}
-                placeholder={'Email or Username'}
+                placeholder={'Email'}
                 value={userName}
                 type='text'
                 eye={false}
@@ -43,7 +43,12 @@ export default function LoginForm() {
             />
             <button className='login-button'>Login</button>
             <div id='login-password-separator'/>
-            <button className='sign-up-button'>Sign Up</button>
+            <button 
+                className='sign-up-button'
+                onClick={() => navigate('/sign-up')}
+            >
+                Sign Up
+            </button>
         </div>
     )
 }

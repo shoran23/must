@@ -1,0 +1,43 @@
+@use '/src/scss/theme/theme';
+
+.form-input-container {
+    width: 80%;
+    height: 10%;
+    @extend %component;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-right: 1.5%;
+}
+.form-input-logo {
+    height: 100%;
+    aspect-ratio: 1;
+    background-color: theme.$background-color;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-input {
+    width: 80%;
+    font-size: 24px;
+    border: none;
+    padding-left: 5%;
+}
+.form-input-eye-button {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-button {
+    width: 50%;
+    aspect-ratio: 4.2;
+    @extend %component;
+    color: white;
+    font-size: 28px;
+    background-color: theme.$button-blue;
+}
