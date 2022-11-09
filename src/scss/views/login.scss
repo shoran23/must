@@ -67,18 +67,20 @@
     align-items: center;
 }
 .login-button {
-    width: 50%;
-    aspect-ratio: 4.2;
+    width: 40%;
+    height: 10%;
     @extend %component;
+    border-radius: 10px;
     color: white;
     font-size: 28px;
     background-color: theme.$button-blue;
 }
 
 .sign-up-button {
-    width: 50%;
-    aspect-ratio: 4.2;
+    width: 40%;
+    height: 10%;
     @extend %component;
+    border-radius: 10px;
     color: white;
     font-size: 28px;
     background-color: theme.$button-grey;

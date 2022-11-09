@@ -6,7 +6,7 @@ export default function LoginInput(props) {
     return (
         <div className='form-input-container'>
             <div className='form-input-logo'>
-                <FontAwesomeIcon icon={props.icon} color='white' fontSize={42}/>
+                <FontAwesomeIcon icon={props.icon} color='white' fontSize={36}/>
             </div>
             <input
                 type={props.type}

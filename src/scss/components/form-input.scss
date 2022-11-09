@@ -2,8 +2,8 @@
 
 .form-input-container {
     width: 80%;
-    height: 10%;
-    @extend %component;
+    height: 9%;
+    border: 1px solid theme.$button-grey;
     border-radius: 10px;
     display: flex;
     flex-direction: row;
@@ -26,6 +26,9 @@
     border: none;
     padding-left: 5%;
 }
+.form-input:focus {
+    outline-style: none;
+}
 .form-input-eye-button {
     background-color: transparent;
     border: none;
@@ -36,7 +39,6 @@
 .form-button {
     width: 50%;
     aspect-ratio: 4.2;
-    @extend %component;
     color: white;
     font-size: 28px;
     background-color: theme.$button-blue;

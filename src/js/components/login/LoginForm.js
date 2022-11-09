@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { faUser, faKey } from '@fortawesome/free-solid-svg-icons'
 import { useNavigate } from 'react-router-dom'
 
-import LoginInput from './LoginInput'
+import FormInput from '../shared/form/FormInput'
 
 export default function LoginForm() {
     const navigate = useNavigate()
@@ -20,7 +20,7 @@ export default function LoginForm() {
 
     return (
         <div id='login-form'>
-            <LoginInput
+            <FormInput
                 // states
                 icon={faUser}
                 placeholder={'Email'}
@@ -30,7 +30,7 @@ export default function LoginForm() {
                 // functions
                 onChange={setUserName}
             />
-            <LoginInput
+            <FormInput
                 // states
                 icon={faKey}
                 placeholder={'Password'}
@@ -41,7 +41,7 @@ export default function LoginForm() {
                 onChange={setPassword}
                 toggleType={togglePasswordType}
             />
-            <button className='login-button'>Login</button>
+            <button className='login-button' onClick={() => navigate('/main')}>Login</button>
             <div id='login-password-separator'/>
             <button 
                 className='sign-up-button'

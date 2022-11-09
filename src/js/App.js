@@ -8,14 +8,12 @@ import '../scss/components/guitar.scss'
 import '../scss/theme/shadows.scss'
 
 import '../scss/components/form-input.scss'
+import '../scss/components/header.scss'
 
 import '../scss/views/view.scss'
 import '../scss/views/login.scss'
 import '../scss/views/sign-up.scss'
-
-
-
-
+import '../scss/views/main.scss'
 
 import Router from './views/Router'
 

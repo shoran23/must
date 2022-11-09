@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import { faUser, faKey, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { useNavigate } from 'react-router-dom'
 
 import FormInput from '../shared/form/FormInput'
 
 export default function SignUpForm() {
+    const navigate = useNavigate()
     const [firstName, setFirstName] = useState('')
     const [lastName, setLastName] = useState('')
     const [email, setEmail] = useState('')
@@ -81,9 +83,8 @@ export default function SignUpForm() {
             />
             <div id='sign-up-options'>
                 <button className='sign-up-option' id='sign-up-register'>Register</button>
-                <button className='sign-up-option' id='sign-up-cancel'>Cancel</button>
+                <button className='sign-up-option' id='sign-up-cancel' onClick={() => navigate('/')}>Cancel</button>
             </div>
-     
         </div>
     )
 }

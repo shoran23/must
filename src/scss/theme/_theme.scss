@@ -2,11 +2,15 @@ $background-color-faded: rgba(69,69,69,0.2);
 $background-color: rgb(69,69,69);
 
 $button-grey: #707070;
-$button-blue: #4786FE;
+$button-grey-active: #414040;
+$button-blue: #1564f7;
+$button-blue-active: #0b3b96;
 
 $text-grey: #454545;
 
 $main-font: Arial, Helvetica, sans-serif;
+$logo-font: Verdana, Geneva, Tahoma, sans-serif;
+
 
 %shadow-component {
     box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
@@ -32,9 +36,28 @@ $main-font: Arial, Helvetica, sans-serif;
     border-radius: 8px;
     @extend %shadow-component;
 }
+
+%standard-button-blue-active {
+    font-family: $main-font;
+    background-color: $button-blue-active;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    @extend %shadow-component; 
+}
+
 %standard-button-grey {
     font-family: $main-font;
     background-color: $button-grey;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    @extend %shadow-component;
+}
+
+%standard-button-grey-active {
+    font-family: $main-font;
+    background-color: $button-grey-active;
     color: white;
     border: none;
     border-radius: 8px;
