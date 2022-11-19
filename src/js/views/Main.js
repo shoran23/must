@@ -8,6 +8,9 @@ export default function Main() {
         <div className='view' id='main'>
             <Header/>   
             <SubHeader/>
+            <div id='main-recent-projects-container'>
+
+            </div>
         </div>
     )
 }
