@@ -9,7 +9,6 @@ import '../scss/components/keyboard.scss'
 import '../scss/components/guitar.scss'
 import '../scss/components/form-input.scss'
 import '../scss/components/header.scss'
-import '../scss/components/sheet.scss'
 
 import '../scss/views/view.scss'
 import '../scss/views/login.scss'

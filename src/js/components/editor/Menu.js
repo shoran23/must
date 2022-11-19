@@ -1,4 +1,4 @@
-import React, { useId, useState } from 'react'
+import React, { useId } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
     faBars,
@@ -17,7 +17,7 @@ import Button from './Button'
 export default function Menu(props) {
     const controls = useDragControls()
 
-    const startDrag = (e) => {
+    const startDrag = e => {
         controls.start(e)
     }
 
@@ -38,7 +38,7 @@ export default function Menu(props) {
             drag 
             dragControls={controls}
         > 
-            <div className='editor-list-header'  onPointerDown={startDrag} onDoubleClick={() => console.log('double click')}>
+            <div className='editor-list-header'  onPointerDown={startDrag}>
                 <FontAwesomeIcon icon={faBars} color='#707070' fontSize={24}/>
             </div>
             {buttons.map(button => (

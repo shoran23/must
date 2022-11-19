@@ -16,6 +16,59 @@
     align-items: center;
 }
 
+.editor-sheet-container {
+    width: 45%;
+    padding: 3vh;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: auto;
+}
+.editor-sheet {
+    width: 95%;
+    aspect-ratio: 0.73;
+    background-color: white;
+    @extend %shadow-component;
+    padding: 2%;
+}
+.editor-sheet-header {
+    width: 100%;
+    aspect-ratio: 6;
+    margin-bottom: 1%;
+
+    background-color: yellow;
+}
+.editor-sheet-footer {
+    width: 100%;
+    aspect-ratio: 8;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+.editor-sheet-measure-row {
+    width: 100%;
+    aspect-ratio: 8;
+    margin-bottom: 1.5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    background-color: pink;
+}
+.editor-sheet-measure {
+    width: 25%;
+    height: 100%;
+
+    background-color: lime;
+}
+
+
 .editor-list {
     padding-right: 1vh;
     padding-left: 1vh;
@@ -40,9 +93,15 @@
     background-color: transparent;
     border: none;
     margin-bottom: 1.5vh;
+    border-bottom: 1px solid theme.$button-grey;
+    padding-bottom: 1vh;
 }
 
 #editor-menu {
     top: 10%;
+    left: 1%;
+}
+#editor-transport {
+    top: 70%;
     left: 1%;
 }

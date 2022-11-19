@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import Header from '../components/shared/header/Header'
 import Sheet from '../components/editor/Sheet'
 import Menu from '../components/editor/Menu'
+import Transport from '../components/editor/Transport'
 
 export default function Editor() {
 
@@ -14,8 +15,6 @@ export default function Editor() {
     const scaleDown = () => {
         setScale(scale - 0.05)
     }
-
-    console.log('scale = ',scale)
 
     return (
         <div className='view' id='editor'>
@@ -29,6 +28,7 @@ export default function Editor() {
                     scaleUp={scaleUp}
                     scaleDown={scaleDown}
                 />
+                <Transport/>
                 <Sheet
                     scale={scale}
                 />

@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Measure from './Measure'
+
 export default function Sheet(props) {
     return (
         <div className='editor-sheet-container' 
@@ -8,7 +10,46 @@ export default function Sheet(props) {
             }}
         >
             <div className='editor-sheet'>
+                <div className='editor-sheet-header'>
+         
+                </div>
 
+                <div className='editor-sheet-measure-row'>
+                    <Measure/>
+                </div>
+
+                <div className='editor-sheet-measure-row'>
+
+                </div>
+
+                <div className='editor-sheet-measure-row'>
+
+                </div>
+
+                <div className='editor-sheet-measure-row'>
+
+                </div>
+
+                <div className='editor-sheet-measure-row'>
+
+                </div>
+
+                <div className='editor-sheet-measure-row'>
+
+                </div>
+
+                <div className='editor-sheet-measure-row'>
+
+                </div>
+
+                <div className='editor-sheet-measure-row'>
+
+                </div>
+
+                <div className='editor-sheet-footer'>
+                    <p>Page 1</p>
+                </div>
+          
             </div>
         </div> 
     )
