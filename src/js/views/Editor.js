@@ -4,6 +4,7 @@ import Header from '../components/shared/header/Header'
 import Sheet from '../components/editor/Sheet'
 import Menu from '../components/editor/Menu'
 import Transport from '../components/editor/Transport'
+import Clefs from '../components/editor/Clefs'
 
 export default function Editor() {
 
@@ -32,6 +33,7 @@ export default function Editor() {
                 <Sheet
                     scale={scale}
                 />
+                <Clefs/>
             </div>
         </div>
     )

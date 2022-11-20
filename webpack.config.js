@@ -25,7 +25,7 @@ module.exports = {
                 }
             },
             {
-                test: /\.(css|scss|sass)$/i,
+                test: /\.(css|scss|sass)$/,
                 use: [
                     "style-loader",
                     "css-loader",
@@ -33,16 +33,11 @@ module.exports = {
                 ],
             },
             {
-                test: /\.(png|jpg|svg)$/i,
+                test: /\.(png|jpg|jpeg|svg|gif)$/,
                 type: 'asset',
-                parser: {
-                    dataUrlCondition: {
-                        maxSize: 3 * 1024
-                    }
-                },
                 use: [
                     {
-                        loader: 'file-loader'
+                        loader: 'file-loader',
                     }
                 ]
             }

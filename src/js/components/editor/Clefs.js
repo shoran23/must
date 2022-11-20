@@ -1,41 +1,32 @@
 import React, { useId } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { 
-    faBars,
-    faBackward,
-    faBackwardFast,
-    faPlay,
-    faRepeat,
-    faBell
-} from '@fortawesome/free-solid-svg-icons'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { motion, useDragControls } from 'framer-motion'
 
 import Button from './Button'
 
-export default function Transport() {
+export default function Clefs() {
     const controls = useDragControls()
-
     const startDrag = e => {
         controls.start(e)
     }
 
     const buttons = [
-        {label: 'Start From Beginning', icon: faBackwardFast, id: useId()},
-        {label: 'Rewind', icon: faBackward, id: useId()},
-        {label: 'Play', icon: faPlay, id: useId()},
-        {label: 'Loop', icon: faRepeat, id: useId()},
-        {label: 'Metronome', icon: faBell, id: useId()}
+        {label: 'Treble', icon: null, id: useId()},
+        {label: 'Tenor', icon: null, id: useId()},
+        {label: 'Bass', icon: null, id: useId()},
+        {label: 'Alto', icon: null, id: useId()}
     ]
 
     return (
         <motion.div
             className='editor-list'
-            id='editor-transport'
+            id='editor-clefs'
             drag
             dragControls={controls}
         >
-            <div className='editor-list-header' onPointerDown={startDrag} >
-                <FontAwesomeIcon icon={faBars} color='#707070'fontSize={24}/>
+            <div className='editor-list-header' onPointerDown={startDrag}> 
+                <FontAwesomeIcon icon={faBars} color='#707070' fontSize={24}/>
             </div>
             {buttons.map((button,index) => (
                 <Button

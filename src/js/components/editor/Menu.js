@@ -41,10 +41,12 @@ export default function Menu(props) {
             <div className='editor-list-header'  onPointerDown={startDrag}>
                 <FontAwesomeIcon icon={faBars} color='#707070' fontSize={24}/>
             </div>
-            {buttons.map(button => (
+            {buttons.map((button,index) => (
                 <Button
                     key={button.id}
+                    index={index}
                     button={button}
+                    length={buttons.length}
                 />
             ))}
         </motion.div>
