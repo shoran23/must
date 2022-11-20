@@ -91,6 +91,12 @@
     margin-bottom: 1.5vh;
     border-bottom: 1px solid theme.$button-grey;
     padding-bottom: 1vh;
+
+}
+.editor-button-image {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
 }
 #editor-menu {
     top: 10%;
@@ -102,5 +108,9 @@
 }
 #editor-clefs {
     top: 10%;
-    left: 97%;
+    left: 95.5%;
+}
+#editor-notes {
+    top: 48%;
+    left: 95.5%;
 }

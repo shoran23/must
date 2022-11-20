@@ -5,6 +5,7 @@ import Sheet from '../components/editor/Sheet'
 import Menu from '../components/editor/Menu'
 import Transport from '../components/editor/Transport'
 import Clefs from '../components/editor/Clefs'
+import Notes from '../components/editor/Notes'
 
 export default function Editor() {
 
@@ -34,6 +35,7 @@ export default function Editor() {
                     scale={scale}
                 />
                 <Clefs/>
+                <Notes/>
             </div>
         </div>
     )

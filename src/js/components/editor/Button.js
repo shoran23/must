@@ -6,12 +6,16 @@ import TrebleWhite from '../../../images/clefs/Treble_clef.png'
 export default function Button(props) {
     const [color, setColor] = useState('white')
     const [borderBottom, setBorderBottom] = useState('1px solid #707070')
+    const [image, setImage] = useState()
 
     useEffect(() => {
         if(props.index === (props.length - 1)) {
             setBorderBottom('none')
         } else {
             setBorderBottom('1px solid #707070')
+        }
+        if(props.button.images !== null) {
+            setImage(props.button.images.inactive)
         }
     },[])
 
@@ -22,15 +26,24 @@ export default function Button(props) {
             }}
             onPointerDown={() => {
                 setColor('#18D0E8')
-                props.button.function()
+                if(props.button.images !== null) {
+                    console.log('button with images pressed')
+                    setImage(props.button.images.active)
+                }
+                //props.button.function()
+  
             }}
-            onPointerUp={() => setColor('white')}
+            onPointerUp={() => {
+                setColor('white')
+                if(props.button.images !== null) {
+                    setImage(props.button.images.inactive)
+                }
+            }}
         >
             {props.button.icon !== null ?
                 <FontAwesomeIcon icon={props.button.icon} color={color} fontSize={42}/>
             :
-                //<img src={'https://source.unsplash.com/user/c_v_r/100x100'} alt='Treble' width="100" height="100"/>
-                <img src={TrebleWhite} width='100' height='300'/>
+                <img src={image} className='editor-button-image'/>
             }
         </button>
     )

@@ -12,10 +12,10 @@ export default function Clefs() {
     }
 
     const buttons = [
-        {label: 'Treble', icon: null, id: useId()},
-        {label: 'Tenor', icon: null, id: useId()},
-        {label: 'Bass', icon: null, id: useId()},
-        {label: 'Alto', icon: null, id: useId()}
+        {label: 'Treble', icon: null, id: useId(), images: {inactive: require('../../../images/clefs/Treble_White.png').default, active: require('../../../images/clefs/Treble_Blue.png').default}},
+        {label: 'Tenor', icon: null, id: useId(), images: {inactive: require('../../../images/clefs/Tenor_White.png').default, active: require('../../../images/clefs/Tenor_Blue.png').default}},
+        {label: 'Bass', icon: null, id: useId(), images: {inactive: require('../../../images/clefs/Bass_White.png').default, active: require('../../../images/clefs/Bass_Blue.png').default}},
+        {label: 'Alto', icon: null, id: useId(), images: {inactive: require('../../../images/clefs/Alto_White.png').default, active: require('../../../images/clefs/Alto_Blue.png').default}}
     ]
 
     return (

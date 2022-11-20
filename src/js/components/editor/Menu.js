@@ -22,13 +22,13 @@ export default function Menu(props) {
     }
 
     const buttons = [
-        {label: 'Zoom In', icon: faMagnifyingGlassPlus, id: useId(), function: props.scaleUp},
-        {label: 'Zoom Out', icon: faMagnifyingGlassMinus, id: useId(), function: props.scaleDown},
-        {label: 'Save', icon: faFloppyDisk, id: useId()},
-        {label: 'New', icon: faFile, id: useId()},
-        {label: 'Print', icon: faPrint, id: useId()},
-        {label: 'Undo', icon: faRotateLeft, id: useId()},
-        {label: 'Redo', icon: faRotateRight, id: useId()}
+        {label: 'Zoom In', icon: faMagnifyingGlassPlus, id: useId(), images: null, function: props.scaleUp},
+        {label: 'Zoom Out', icon: faMagnifyingGlassMinus, id: useId(), images: null, function: props.scaleDown},
+        {label: 'Save', icon: faFloppyDisk, id: useId(), images: null},
+        {label: 'New', icon: faFile, id: useId(), images: null},
+        {label: 'Print', icon: faPrint, id: useId(), images: null},
+        {label: 'Undo', icon: faRotateLeft, id: useId(), images: null},
+        {label: 'Redo', icon: faRotateRight, id: useId(), images: null}
     ]
 
     return (

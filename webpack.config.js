@@ -7,7 +7,7 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 module.exports = {
     entry: path.resolve(__dirname, 'src/js/index.js'),
     output: {
-        path: path.resolve(__dirname, 'settings'),
+        path: path.resolve(__dirname, 'build'),
         filename: 'bundle.[contenthash].js',
         publicPath: '',
     },
@@ -15,7 +15,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(js|jsx)$/,
+                test: /\.(js|jsx)$/i,
                 exclude: /node_modules/,
                 use: {
                     loader: "babel-loader",
@@ -25,7 +25,7 @@ module.exports = {
                 }
             },
             {
-                test: /\.(css|scss|sass)$/,
+                test: /\.(css|scss|sass)$/i,
                 use: [
                     "style-loader",
                     "css-loader",
@@ -33,13 +33,8 @@ module.exports = {
                 ],
             },
             {
-                test: /\.(png|jpg|jpeg|svg|gif)$/,
-                type: 'asset',
-                use: [
-                    {
-                        loader: 'file-loader',
-                    }
-                ]
+                test: /\.(png|jpe?g|gif)$/i,
+                loader: 'file-loader',
             }
         ]
     },
@@ -55,8 +50,8 @@ module.exports = {
         })
     ],
     devServer: {
-        historyApiFallback: true,
-        hot: true,
-        port: 8000
+        // historyApiFallback: true,
+        // hot: true,
+        // port: 8000
     }
 }
