@@ -2,6 +2,7 @@ import React, { useId } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
     faBars,
+    faHome,
     faMagnifyingGlassPlus,
     faMagnifyingGlassMinus,
     faFloppyDisk,
@@ -16,10 +17,6 @@ import Button from './Button'
 
 export default function Menu(props) {
     const controls = useDragControls()
-
-    const startDrag = e => {
-        controls.start(e)
-    }
 
     const buttons = [
         {label: 'Zoom In', icon: faMagnifyingGlassPlus, id: useId(), images: null, function: props.scaleUp},
@@ -38,8 +35,9 @@ export default function Menu(props) {
             drag 
             dragControls={controls}
         > 
-            <div className='editor-list-header'  onPointerDown={startDrag}>
-                <FontAwesomeIcon icon={faBars} color='#707070' fontSize={24}/>
+            <div className='editor-list-header'>
+                <FontAwesomeIcon icon={faBars} color='#707070' fontSize={18}/>
+                <FontAwesomeIcon icon={faHome} color='#707070' fontSize={18}/>
             </div>
             {buttons.map((button,index) => (
                 <Button

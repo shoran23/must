@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import Measure from './Measure'
 
@@ -16,34 +16,58 @@ export default function Sheet(props) {
 
                 <div className='editor-sheet-measure-row'>
                     <Measure/>
+                    <Measure/>
+                    <Measure/>
+                    <Measure/>
                 </div>
 
                 <div className='editor-sheet-measure-row'>
-
+                    <Measure/>
+                    <Measure/>
+                    <Measure/>
+                    <Measure/>
                 </div>
 
                 <div className='editor-sheet-measure-row'>
-
+                    <Measure/>
+                    <Measure/>
+                    <Measure/>
+                    <Measure/>
                 </div>
 
                 <div className='editor-sheet-measure-row'>
-
+                    <Measure/>
+                    <Measure/>
+                    <Measure/>
+                    <Measure/>
                 </div>
 
                 <div className='editor-sheet-measure-row'>
-
+                    <Measure/>
+                    <Measure/>
+                    <Measure/>
+                    <Measure/>
                 </div>
 
                 <div className='editor-sheet-measure-row'>
-
+                    <Measure/>
+                    <Measure/>
+                    <Measure/>
+                    <Measure/>
                 </div>
 
                 <div className='editor-sheet-measure-row'>
-
+                    <Measure/>
+                    <Measure/>
+                    <Measure/>
+                    <Measure/>
                 </div>
 
                 <div className='editor-sheet-measure-row'>
-
+                    <Measure/>
+                    <Measure/>
+                    <Measure/>
+                    <Measure/>
                 </div>
 
                 <div className='editor-sheet-footer'>

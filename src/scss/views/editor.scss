@@ -34,7 +34,7 @@
 .editor-sheet-header {
     width: 100%;
     aspect-ratio: 6;
-    margin-bottom: 1%;
+    margin-bottom: 3%;
 
     background-color: yellow;
 }
@@ -50,21 +50,30 @@
 }
 .editor-sheet-measure-row {
     width: 100%;
-    aspect-ratio: 8;
-    margin-bottom: 1.5%;
+    aspect-ratio: 12;
+    margin-bottom: 10%;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
 
-    background-color: pink;
 }
 .editor-sheet-measure {
     width: 25%;
     height: 100%;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
 
-    background-color: lime;
 }
+.editor-sheet-measure-line{
+    width: 100%;
+    height: 25%;
+    border-top: 1px solid black;
+}
+
+
+
 .editor-list {
     padding-right: 1vh;
     padding-left: 1vh;
@@ -83,14 +92,18 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5vh;
+
+    //background-color: lime;
 }
 .editor-button {
     background-color: transparent;
     border: none;
     margin-bottom: 1.5vh;
     border-bottom: 1px solid theme.$button-grey;
-    padding-bottom: 1vh;
+    padding-bottom: 1.5vh;
 
 }
 .editor-button-image {
@@ -110,11 +123,16 @@
     top: 10%;
     left: 95.5%;
 }
+#editor-instuments {
+    top: 10%;
+    left: 91%;
+}
 #editor-notes {
-    top: 48%;
+    top: 50%;
     left: 95.5%;
 }
 #editor-rests {
-    top: 48%;
+    top: 50%;
     left: 91%;
 }
+
