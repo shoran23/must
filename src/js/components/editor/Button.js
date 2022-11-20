@@ -8,6 +8,25 @@ export default function Button(props) {
     const [borderBottom, setBorderBottom] = useState('1px solid #707070')
     const [image, setImage] = useState()
 
+    const handleActive = () => {
+        if(props.button.icon !== null) {
+            setColor('#18D0E8')
+        }
+        if(props.button.images !== null) {
+            console.log('button with images pressed')
+            setImage(props.button.images.active)
+        }
+        // function here
+    }
+    const handleInactive = () => {
+        if(props.button.icon !== null) {
+            setColor('white')
+        }
+        if(props.button.images !== null) {
+            setImage(props.button.images.inactive)
+        }
+    }
+
     useEffect(() => {
         if(props.index === (props.length - 1)) {
             setBorderBottom('none')
@@ -24,21 +43,9 @@ export default function Button(props) {
             style={{
                 borderBottom: borderBottom
             }}
-            onPointerDown={() => {
-                setColor('#18D0E8')
-                if(props.button.images !== null) {
-                    console.log('button with images pressed')
-                    setImage(props.button.images.active)
-                }
-                //props.button.function()
-  
-            }}
-            onPointerUp={() => {
-                setColor('white')
-                if(props.button.images !== null) {
-                    setImage(props.button.images.inactive)
-                }
-            }}
+            onPointerDown={handleActive}
+            onPointerUp={handleInactive}
+            onPointerLeave={handleInactive}
         >
             {props.button.icon !== null ?
                 <FontAwesomeIcon icon={props.button.icon} color={color} fontSize={42}/>
