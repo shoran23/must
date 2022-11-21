@@ -35,9 +35,35 @@
     width: 100%;
     aspect-ratio: 6;
     margin-bottom: 3%;
-
-    background-color: yellow;
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 25% 50% 25%;
+    grid-template-areas: 
+        "composer composer ."
+        "title title title"
+        ". . ."
+    ;
 }
+.editor-sheet-input {
+    background-color: transparent;
+    border: none;
+    width: auto;
+    padding: 5px;
+    outline: none;
+}
+.author {
+    font-size: 18px;
+    font-weight: 500;
+    grid-area: composer;
+}
+.title {
+    font-size: 36px;
+    font-weight: bold;
+    grid-area: title;
+    text-align: center;
+}
+
+
 .editor-sheet-footer {
     width: 100%;
     aspect-ratio: 8;

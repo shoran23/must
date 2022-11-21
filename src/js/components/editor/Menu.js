@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
     faBars,
     faHome,
+    faUp,
+    faDown,
     faMagnifyingGlassPlus,
     faMagnifyingGlassMinus,
     faFloppyDisk,
@@ -38,6 +40,7 @@ export default function Menu(props) {
             <div className='editor-list-header'>
                 <FontAwesomeIcon icon={faBars} color='#707070' fontSize={18}/>
                 <FontAwesomeIcon icon={faHome} color='#707070' fontSize={18}/>
+                {/* <FontAwesomeIcon icon={}/> */}
             </div>
             {buttons.map((button,index) => (
                 <Button

@@ -10,8 +10,9 @@ import Rests from '../components/editor/Rests'
 import Instruments from '../components/editor/Instruments'
 
 export default function Editor() {
-
     const [scale, setScale] = useState(1)
+    const [composer, setComposer] = useState('Composer')
+    const [title, setTitle] = useState('Title')
 
     const scaleUp = () => {
         setScale(scale + 0.05)
@@ -34,7 +35,13 @@ export default function Editor() {
                 />
                 <Transport/>
                 <Sheet
+                    // states
                     scale={scale}
+                    composer={composer}
+                    title={title}
+                    // functions
+                    setComposer={setComposer}
+                    setTitle={setTitle}
                 />
                 <Instruments/>
                 <Clefs/>
