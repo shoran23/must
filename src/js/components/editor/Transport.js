@@ -17,7 +17,7 @@ import Button from './Button'
 
 export default function Transport() {
     const controls = useDragControls()
-    const [extendDown, setExtendDown] = useState(true)
+    const [extendDown, setExtendDown] = useState(false)
 
     const buttons = [
         {label: 'Start From Beginning', icon: faBackwardFast, id: useId(), images: null},

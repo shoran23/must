@@ -19,7 +19,7 @@ import Button from './Button'
 
 export default function Menu(props) {
     const controls = useDragControls()
-    const [extendDown, setExtendDown] = useState(true)
+    const [extendDown, setExtendDown] = useState(false)
 
     const buttons = [
         {label: 'Zoom In', icon: faMagnifyingGlassPlus, id: useId(), images: null, function: props.scaleUp},

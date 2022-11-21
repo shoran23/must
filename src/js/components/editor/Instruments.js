@@ -13,7 +13,7 @@ import Button from './Button'
 
 export default function Instruments() {
     const controls = useDragControls()
-    const [extendDown, setExtendDown] = useState(true)
+    const [extendDown, setExtendDown] = useState(false)
 
     const buttons = [
         {label: 'Guitar', icon: faGuitar, id: useId(), images: null}
