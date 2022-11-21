@@ -121,8 +121,6 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 0.5vh;
-
-    //background-color: lime;
 }
 .editor-button {
     background-color: transparent;
@@ -130,8 +128,16 @@
     margin-bottom: 1.5vh;
     border-bottom: 1px solid theme.$button-grey;
     padding-bottom: 1.5vh;
-
+    padding-left: 1.5vh;
+    padding-right: 1.5vh;
 }
+.editor-list-label {
+    padding-left: 1.3vh;
+    padding-right: 1.3vh; 
+    color: white;
+    font-size: 18px;
+}
+
 .editor-button-image {
     width: 42px;
     height: 42px;
@@ -143,7 +149,7 @@
 }
 #editor-transport {
     top: 10%;
-    left: 6%;
+    left: 6.5%;
 }
 #editor-clefs {
     top: 10%;
