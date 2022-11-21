@@ -13,12 +13,19 @@ export default function Editor() {
     const [scale, setScale] = useState(1)
     const [composer, setComposer] = useState('Composer')
     const [title, setTitle] = useState('Title')
+    const [menuZIndexes, setMenuZIndexs] = useState(['1', '1', '1', '1', '1', '1'])
 
     const scaleUp = () => {
         setScale(scale + 0.05)
     }
     const scaleDown = () => {
         setScale(scale - 0.05)
+    }
+
+    const updateMenuZIndexes = index => {
+        let zIndexes = ['1', '1', '1', '1', '1', '1']
+        zIndexes[index] = '2'
+        setMenuZIndexs(zIndexes)
     }
 
     return (
@@ -30,10 +37,21 @@ export default function Editor() {
                 }}
             >
                 <Menu
+                    // states
+                    menuIndex={0}
+                    menuZIndexes={menuZIndexes}
+                    // functions
+                    updateMenuZIndexes={updateMenuZIndexes}
                     scaleUp={scaleUp}
                     scaleDown={scaleDown}
                 />
-                <Transport/>
+                <Transport
+                    // states
+                    menuIndex={1}
+                    menuZIndexes={menuZIndexes}
+                    // functions
+                    updateMenuZIndexes={updateMenuZIndexes}
+                />
                 <Sheet
                     // states
                     scale={scale}
@@ -43,10 +61,34 @@ export default function Editor() {
                     setComposer={setComposer}
                     setTitle={setTitle}
                 />
-                <Instruments/>
-                <Clefs/>
-                <Rests/>
-                <Notes/>
+                <Instruments
+                    // states
+                    menuIndex={2}
+                    menuZIndexes={menuZIndexes}
+                    // functions
+                    updateMenuZIndexes={updateMenuZIndexes}
+                />
+                <Clefs
+                    // states
+                    menuIndex={3}
+                    menuZIndexes={menuZIndexes}
+                    // functions
+                    updateMenuZIndexes={updateMenuZIndexes}
+                />
+                <Rests
+                    // states
+                    menuIndex={4}
+                    menuZIndexes={menuZIndexes}
+                    // functions
+                    updateMenuZIndexes={updateMenuZIndexes}
+                />
+                <Notes
+                    // states
+                    menuIndex={5}
+                    menuZIndexes={menuZIndexes}
+                    // functions
+                    updateMenuZIndexes={updateMenuZIndexes}
+                />
             </div>
         </div>
     )

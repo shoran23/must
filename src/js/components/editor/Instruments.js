@@ -11,7 +11,7 @@ import { motion, useDragControls } from 'framer-motion'
 
 import Button from './Button'
 
-export default function Instruments() {
+export default function Instruments(props) {
     const controls = useDragControls()
     const [extendDown, setExtendDown] = useState(false)
 
@@ -25,6 +25,10 @@ export default function Instruments() {
             id='editor-instuments'
             drag
             dragControls={controls}
+            style={{
+                zIndex: props.menuZIndexes[props.menuIndex]
+            }}
+            onPointerDown={() => props.updateMenuZIndexes(props.menuIndex)}
         >  
             <div className='editor-list-header'>
                 <FontAwesomeIcon icon={faBars} color='#707070' fontSize={18}/>

@@ -37,6 +37,10 @@ export default function Menu(props) {
             id='editor-menu'
             drag 
             dragControls={controls}
+            style={{
+                zIndex: props.menuZIndexes[props.menuIndex]
+            }}
+            onPointerDown={() => props.updateMenuZIndexes(props.menuIndex)}
         > 
             <div className='editor-list-header'>
                 <FontAwesomeIcon icon={faBars} color='#707070' fontSize={18}/>
