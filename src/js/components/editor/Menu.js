@@ -38,7 +38,7 @@ export default function Menu(props) {
             drag 
             dragControls={controls}
             style={{
-                zIndex: props.menuZIndexes[props.menuIndex]
+                zIndex: props.menuZIndexes[props.menuIndex],
             }}
             onPointerDown={() => props.updateMenuZIndexes(props.menuIndex)}
         > 
