@@ -8,6 +8,7 @@ import Clefs from '../components/editor/Clefs'
 import Notes from '../components/editor/Notes'
 import Rests from '../components/editor/Rests'
 import Instruments from '../components/editor/Instruments'
+import Pages from '../components/editor/Pages'
 
 export default function Editor() {
     const [scale, setScale] = useState(1)
@@ -52,15 +53,6 @@ export default function Editor() {
                     // functions
                     updateMenuZIndexes={updateMenuZIndexes}
                 />
-                <Sheet
-                    // states
-                    scale={scale}
-                    composer={composer}
-                    title={title}
-                    // functions
-                    setComposer={setComposer}
-                    setTitle={setTitle}
-                />
                 <Instruments
                     // states
                     menuIndex={2}
@@ -88,6 +80,22 @@ export default function Editor() {
                     menuZIndexes={menuZIndexes}
                     // functions
                     updateMenuZIndexes={updateMenuZIndexes}
+                />
+                <Pages
+                    // states
+                    menuIndex={6}
+                    menuZIndexes={menuZIndexes}
+                    // functions
+                    updateMenuZIndexes={updateMenuZIndexes}
+                />
+                <Sheet
+                    // states
+                    scale={scale}
+                    composer={composer}
+                    title={title}
+                    // functions
+                    setComposer={setComposer}
+                    setTitle={setTitle}
                 />
             </div>
         </div>

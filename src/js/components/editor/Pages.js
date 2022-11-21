@@ -26,8 +26,26 @@ export default function Pages(props) {
             <div className='editor-list-header'>
                 <FontAwesomeIcon icon={faBars} color='#707070' fontSize={18}/>
                 <FontAwesomeIcon icon={faHome} color='#707070' fontSize={18}/>
-
+                {extendDown ?
+                    <FontAwesomeIcon icon={faArrowUp} color='#707070' fontSize={18}/>
+                :
+                    <FontAwesomeIcon icon={faArrowDown} color='#707070' fontSize={18}/>
+                }
             </div>
+            {extendDown ?
+                <React.Fragment>   
+                    {buttons.map((button,index) => {
+                        <Button
+                            key={button.id}
+                            index={index}
+                            button={button}
+                            length={butons.length}
+                        />
+                    })}
+                </React.Fragment>
+            :
+                <p className='editor-list-label'>Pages</p>        
+            }
         </motion.div>
     )
 }
