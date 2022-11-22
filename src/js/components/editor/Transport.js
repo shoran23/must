@@ -1,4 +1,4 @@
-import React, { useId, useState } from 'react'
+import React, { useId, useState, useContext } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { 
     faBars,
@@ -8,6 +8,7 @@ import {
     faBackward,
     faBackwardFast,
     faPlay,
+    faStop,
     faRepeat,
     faBell
 } from '@fortawesome/free-solid-svg-icons'
@@ -15,14 +16,18 @@ import { motion, useDragControls } from 'framer-motion'
 
 import Button from './Button'
 
+import { PlayerContext } from '../../context/PlayerContext'
+
 export default function Transport(props) {
     const controls = useDragControls()
     const [extendDown, setExtendDown] = useState(false)
+    const playerContext = useContext(PlayerContext)
 
     const buttons = [
         {label: 'Start From Beginning', icon: faBackwardFast, id: useId(), images: null},
         {label: 'Rewind', icon: faBackward, id: useId(), images: null},
         {label: 'Play', icon: faPlay, id: useId(), images: null},
+        {label: 'Stop', icon: faStop, id: useId(), images: null},
         {label: 'Loop', icon: faRepeat, id: useId(), images: null},
         {label: 'Metronome', icon: faBell, id: useId(), images: null}
     ]
