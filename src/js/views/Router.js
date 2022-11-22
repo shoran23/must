@@ -10,12 +10,13 @@ import Login from './Login'
 import SignUp from './SignUp'
 import Main from './Main'
 import Editor from './Editor'
+import PlayerSandbox from './PlayerSandbox'
 
 export default function Router() {
     const navigate = useNavigate()
 
     useEffect(() => {
-        navigate('/editor')
+        navigate('/player-sandbox')
     },[])
 
     return (
@@ -24,6 +25,7 @@ export default function Router() {
             <Route path='/sign-up' element={<SignUp/>}/>
             <Route path='/main' element={<Main/>}/>
             <Route path='/editor' element={<Editor/>} />
+            <Route path='/player-sandbox' element={<PlayerSandbox/>}/>
         </Routes>
     )
 }

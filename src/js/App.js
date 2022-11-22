@@ -18,10 +18,14 @@ import '../scss/views/editor.scss'
 
 import Router from './views/Router'
 
+import PlayerProvider from './context/PlayerContext'
+
 export default function App() {
     return (
-        <ViewRouter>
-            <Router/>
-        </ViewRouter>
+        <PlayerProvider>
+            <ViewRouter>
+                <Router/>
+            </ViewRouter>
+        </PlayerProvider>
     )
 }
