@@ -50,6 +50,7 @@ export default function Rests(props) {
                             index={index}
                             button={button}
                             length={buttons.length}
+                            context={null}
                         />
                     ))}
                 </React.Fragment>            

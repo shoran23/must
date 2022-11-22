@@ -40,6 +40,7 @@ export default function Pages(props) {
                             index={index}
                             button={button}
                             length={butons.length}
+                            context={null}
                         />
                     })}
                 </React.Fragment>

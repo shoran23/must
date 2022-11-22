@@ -24,13 +24,15 @@ export default function Transport(props) {
     const playerContext = useContext(PlayerContext)
 
     const buttons = [
-        {label: 'Start From Beginning', icon: faBackwardFast, id: useId(), images: null},
-        {label: 'Rewind', icon: faBackward, id: useId(), images: null},
-        {label: 'Play', icon: faPlay, id: useId(), images: null},
-        {label: 'Stop', icon: faStop, id: useId(), images: null},
-        {label: 'Loop', icon: faRepeat, id: useId(), images: null},
-        {label: 'Metronome', icon: faBell, id: useId(), images: null}
+        {label: 'Start From Beginning', icon: faBackwardFast, id: useId(), images: null, press: playerContext.startFromBeginning, active: null},
+        {label: 'Rewind', icon: faBackward, id: useId(), images: null, press: playerContext.rewind, active: null},
+        {label: 'Play', icon: faPlay, id: useId(), images: null, press: playerContext.play, active: {state: 'status', value: 'play'}},
+        {label: 'Stop', icon: faStop, id: useId(), images: null, press: playerContext.stop, active: {state:  'status', value: 'stop'}},
+        {label: 'Loop', icon: faRepeat, id: useId(), images: null, press: playerContext.toggleLoop, active: {state: 'loopEnable', value: true}},
+        {label: 'Metronome', icon: faBell, id: useId(), images: null, press: playerContext.toggleMetronome, active: {state: 'metronomeEnable', value: true}}
     ]
+
+    console.log('playerContext.status = ',playerContext.status)
 
     return (
         <motion.div
@@ -60,6 +62,7 @@ export default function Transport(props) {
                         index={index}
                         button={button}
                         length={buttons.length}
+                        context={playerContext}
                     />
                 ))}            
             </React.Fragment>

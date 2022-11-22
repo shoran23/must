@@ -47,6 +47,7 @@ export default function Instruments(props) {
                             index={index}
                             button={button}
                             length={buttons.length}
+                            context={null}
                         />
                     ))}
                 </React.Fragment>            

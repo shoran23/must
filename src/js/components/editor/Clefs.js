@@ -49,6 +49,7 @@ export default function Clefs(props) {
                             index={index}
                             button={button}
                             length={buttons.length}
+                            context={null}
                         />
                     ))}
                 </React.Fragment>            

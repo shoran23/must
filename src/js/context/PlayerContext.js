@@ -16,12 +16,15 @@ class PlayerProvider extends React.Component {
             music: {},
             synth: new Synth().toDestination(),
             sampler: new Sampler().toDestination(),
+            loopEnable: false,
+            metronomeEnable: false,
             handleState: this.handleState, 
             startFromBeginning: this.startFromBeginning,
             rewind: this.rewind,
             play: this.play,
             stop: this.stop,
-            loop: this.loop,
+            toggleLoop: this.toggleLoop,
+            toggleMetronome: this.toggleMetronome,
         }
     }
 
@@ -36,12 +39,17 @@ class PlayerProvider extends React.Component {
     }
     play = () => {
         console.log('player, start')
+        this.setState({status: 'play'})
     }
     stop = () => {
         console.log('player, stop')
+        this.setState({status: 'stop'})
     }
-    loop = () => {
-
+    toggleLoop = () => {
+        this.setState({loopEnable: !this.state.loopEnable})
+    }
+    toggleMetronome = () => {
+        this.setState({metronomeEnable: !this.state.metronomeEnable})
     }
 
 
