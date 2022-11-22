@@ -16,7 +16,7 @@ export default function Router() {
     const navigate = useNavigate()
 
     useEffect(() => {
-        navigate('/player-sandbox')
+        navigate('/editor')
     },[])
 
     return (

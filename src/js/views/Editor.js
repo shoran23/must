@@ -9,12 +9,13 @@ import Notes from '../components/editor/Notes'
 import Rests from '../components/editor/Rests'
 import Instruments from '../components/editor/Instruments'
 import Pages from '../components/editor/Pages'
+import Bpm from '../components/editor/Bpm'
 
 export default function Editor() {
     const [scale, setScale] = useState(1)
     const [composer, setComposer] = useState('Composer')
     const [title, setTitle] = useState('Title')
-    const [menuZIndexes, setMenuZIndexs] = useState(['1', '1', '1', '1', '1', '1'])
+    const [menuZIndexes, setMenuZIndexs] = useState(['1', '1', '1', '1', '1', '1','1'])
 
     const scaleUp = () => {
         setScale(scale + 0.05)
@@ -24,7 +25,7 @@ export default function Editor() {
     }
 
     const updateMenuZIndexes = index => {
-        let zIndexes = ['1', '1', '1', '1', '1', '1']
+        let zIndexes = ['1', '1', '1', '1', '1', '1','1']
         zIndexes[index] = '2'
         setMenuZIndexs(zIndexes)
     }
@@ -84,6 +85,13 @@ export default function Editor() {
                 <Pages
                     // states
                     menuIndex={6}
+                    menuZIndexes={menuZIndexes}
+                    // functions
+                    updateMenuZIndexes={updateMenuZIndexes}
+                />
+                <Bpm
+                    // states
+                    menuIndex={7}
                     menuZIndexes={menuZIndexes}
                     // functions
                     updateMenuZIndexes={updateMenuZIndexes}

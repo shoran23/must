@@ -195,4 +195,34 @@
     top: 48%;
     left: 1%;
 }
+#editor-bpm {
+    top: 48%;
+    left: 7.5%
+}
+
+#editor-bpm-form {
+    padding: 0.8vh;
+    width: 12vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#editor-bpm-input {
+    width: 50%;
+    margin-right: 5%;
+    color: white;
+    background-color: rgba(255,255,255,0.2);
+    font-size: 18px;
+    border: none;
+    outline: none;
+    padding: 0.5vh;
+}
+#editor-bpm-input-units {
+    color: white;
+}
+
+
+
 

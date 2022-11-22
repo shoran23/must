@@ -1,7 +1,7 @@
 import React from 'react'
 import { Sampler, Synth } from 'tone'
 
-const PlayerContext = React.createContext()
+export const PlayerContext = React.createContext()
 
 class PlayerProvider extends React.Component {
     constructor() {
@@ -13,6 +13,7 @@ class PlayerProvider extends React.Component {
             music: {},
             synth: new Synth().toDestination(),
             sampler: new Sampler().toDestination(),
+            handleState: this.handleState
         }
     }
 
