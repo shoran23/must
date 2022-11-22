@@ -1,5 +1,5 @@
 import React from 'react'
-import { Synth } from 'tone'
+import { Sampler, Synth } from 'tone'
 
 const PlayerContext = React.createContext()
 
@@ -7,10 +7,12 @@ class PlayerProvider extends React.Component {
     constructor() {
         super()
         this.state = {
-            bpm: 60,
-            beat: 0,        // current beat within the player loop
+            beat: 0,            // current beat within the player loop
+            bpm: 60,            // current beats per minute for the player, will default to the musics bpm but can be changed
+            metronome: false,
             music: {},
             synth: new Synth().toDestination(),
+            sampler: new Sampler().toDestination(),
         }
     }
 
