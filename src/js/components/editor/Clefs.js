@@ -27,18 +27,18 @@ export default function Clefs(props) {
             pressValue: null,
             active: null
         },
-        {
-            label: 'Tenor', 
-            icon: null, 
-            id: useId(), 
-            images: {
-                inactive: require('../../../images/clefs/Tenor_White.png').default, 
-                active: require('../../../images/clefs/Tenor_Blue.png').default
-            },
-            press: null,
-            pressValue: null,
-            active: null
-        },
+        // {
+        //     label: 'Tenor', 
+        //     icon: null, 
+        //     id: useId(), 
+        //     images: {
+        //         inactive: require('../../../images/clefs/Tenor_White.png').default, 
+        //         active: require('../../../images/clefs/Tenor_Blue.png').default
+        //     },
+        //     press: null,
+        //     pressValue: null,
+        //     active: null
+        // },
         {
             label: 'Bass', 
             icon: null, 
