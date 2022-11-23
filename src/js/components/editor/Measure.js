@@ -9,8 +9,10 @@ export default function Measure(props) {
     const playerContext = useContext(PlayerContext)
 
     const handleNoteSelect = (note) => {
-
+        
     }
+
+    console.log('measure = ',props.measure)
 
     return (
         <div className='editor-sheet-measure'>

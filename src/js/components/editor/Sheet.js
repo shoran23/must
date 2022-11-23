@@ -41,7 +41,7 @@ export default function Sheet(props) {
                 <div className='editor-sheet-measure-container'>
                     {playerContext.music.measures.map((measure,index)=> (
                         <Measure 
-                            key={`editor-sheet-music-measure-${measure}`}
+                            key={`editor-sheet-music-measure-${index}`}
                             index={index}
                             measure={measure}
                         />
