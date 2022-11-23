@@ -16,7 +16,15 @@ export default function Instruments(props) {
     const [extendDown, setExtendDown] = useState(false)
 
     const buttons = [
-        {label: 'Guitar', icon: faGuitar, id: useId(), images: null}
+        {
+            label: 'Guitar', 
+            icon: faGuitar, 
+            id: useId(), 
+            images: null,
+            press: null,
+            pressValue: null,
+            active: null
+        }
     ]
 
     return (

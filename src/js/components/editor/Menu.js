@@ -22,13 +22,69 @@ export default function Menu(props) {
     const [extendDown, setExtendDown] = useState(false)
 
     const buttons = [
-        {label: 'Zoom In', icon: faMagnifyingGlassPlus, id: useId(), images: null, function: props.scaleUp},
-        {label: 'Zoom Out', icon: faMagnifyingGlassMinus, id: useId(), images: null, function: props.scaleDown},
-        {label: 'Save', icon: faFloppyDisk, id: useId(), images: null},
-        {label: 'New', icon: faFile, id: useId(), images: null},
-        {label: 'Print', icon: faPrint, id: useId(), images: null},
-        {label: 'Undo', icon: faRotateLeft, id: useId(), images: null},
-        {label: 'Redo', icon: faRotateRight, id: useId(), images: null}
+        {
+            label: 'Zoom In', 
+            icon: faMagnifyingGlassPlus, 
+            id: useId(), 
+            images: null, 
+            press: props.scaleUp,
+            pressValue: null,
+            active: null,
+        },
+        {
+            label: 'Zoom Out', 
+            icon: faMagnifyingGlassMinus, 
+            id: useId(), 
+            images: null, 
+            press: props.scaleDown,
+            pressValue: null,
+            active: null,
+        },
+        {
+            label: 'Save', 
+            icon: faFloppyDisk, 
+            id: useId(), 
+            images: null,
+            press: null,
+            pressValue: null,
+            active: null,
+        },
+        {
+            label: 'New', 
+            icon: faFile, 
+            id: useId(), 
+            images: null,
+            press: null,
+            pressValue: null,
+            active: null,
+        },
+        {
+            label: 'Print', 
+            icon: faPrint, 
+            id: useId(), 
+            images: null,
+            press: null,
+            pressValue: null,
+            active: null,
+        },
+        {
+            label: 'Undo', 
+            icon: faRotateLeft, 
+            id: useId(), 
+            images: null,
+            press: null,
+            pressValue: null,
+            active: null
+        },
+        {
+            label: 'Redo', 
+            icon: faRotateRight, 
+            id: useId(), 
+            images: null,
+            press: null,
+            pressValue: null,
+            active: null
+        }
     ]
 
     return (

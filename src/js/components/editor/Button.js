@@ -17,7 +17,6 @@ export default function Button(props) {
         }
     },[])
 
-
     useEffect(() => {
         if(props.context !== null) {
             if(props.button.active !== null) {
@@ -47,10 +46,12 @@ export default function Button(props) {
                 borderBottom: borderBottom
             }}
             onClick={() => {
-                if(props.button.pressValue === null){
-                    props.button.press()
-                } else {
-                    props.button.press(props.button.pressValue)
+                if(props.button.press !== null) {
+                    if(props.button.pressValue === null){
+                        props.button.press()
+                    } else {
+                        props.button.press(props.button.pressValue)
+                    }
                 }
             }}
         >

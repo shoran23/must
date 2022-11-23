@@ -15,10 +15,54 @@ export default function Clefs(props) {
     const [extendDown, setExtendDown] = useState(false)
 
     const buttons = [
-        {label: 'Treble', icon: null, id: useId(), images: {inactive: require('../../../images/clefs/Treble_White.png').default, active: require('../../../images/clefs/Treble_Blue.png').default}},
-        {label: 'Tenor', icon: null, id: useId(), images: {inactive: require('../../../images/clefs/Tenor_White.png').default, active: require('../../../images/clefs/Tenor_Blue.png').default}},
-        {label: 'Bass', icon: null, id: useId(), images: {inactive: require('../../../images/clefs/Bass_White.png').default, active: require('../../../images/clefs/Bass_Blue.png').default}},
-        {label: 'Alto', icon: null, id: useId(), images: {inactive: require('../../../images/clefs/Alto_White.png').default, active: require('../../../images/clefs/Alto_Blue.png').default}}
+        {
+            label: 'Treble', 
+            icon: null, 
+            id: useId(), 
+            images: {
+                inactive: require('../../../images/clefs/Treble_White.png').default, 
+                active: require('../../../images/clefs/Treble_Blue.png').default
+            },
+            press: null,
+            pressValue: null,
+            active: null
+        },
+        {
+            label: 'Tenor', 
+            icon: null, 
+            id: useId(), 
+            images: {
+                inactive: require('../../../images/clefs/Tenor_White.png').default, 
+                active: require('../../../images/clefs/Tenor_Blue.png').default
+            },
+            press: null,
+            pressValue: null,
+            active: null
+        },
+        {
+            label: 'Bass', 
+            icon: null, 
+            id: useId(), 
+            images: {
+                inactive: require('../../../images/clefs/Bass_White.png').default, 
+                active: require('../../../images/clefs/Bass_Blue.png').default
+            },
+            press: null, 
+            pressValue: null,
+            active: null,
+        },
+        {
+            label: 'Alto', 
+            icon: null, 
+            id: useId(), 
+            images: {
+                inactive: require('../../../images/clefs/Alto_White.png').default, 
+                active: require('../../../images/clefs/Alto_Blue.png').default
+            },
+            press: null,
+            pressValue: null,
+            active: null,
+        }
     ]
 
     return (
