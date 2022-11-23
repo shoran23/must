@@ -24,15 +24,73 @@ export default function Transport(props) {
     const playerContext = useContext(PlayerContext)
 
     const buttons = [
-        {label: 'Start From Beginning', icon: faBackwardFast, id: useId(), images: null, press: playerContext.startFromBeginning, active: null},
-        {label: 'Rewind', icon: faBackward, id: useId(), images: null, press: playerContext.rewind, active: null},
-        {label: 'Play', icon: faPlay, id: useId(), images: null, press: playerContext.createSequence, active: {state: 'status', value: 'play'}},
-        {label: 'Stop', icon: faStop, id: useId(), images: null, press: playerContext.stop, active: {state:  'status', value: 'stop'}},
-        {label: 'Loop', icon: faRepeat, id: useId(), images: null, press: playerContext.toggleLoop, active: {state: 'loopEnable', value: true}},
-        {label: 'Metronome', icon: faBell, id: useId(), images: null, press: playerContext.toggleMetronome, active: {state: 'metronomeEnable', value: true}}
+        {
+            label: 'Start From Beginning', 
+            icon: faBackwardFast, 
+            id: useId(), 
+            images: null, 
+            press: playerContext.startFromBeginning, 
+            pressValue: null,
+            active: null
+        },
+        {
+            label: 'Rewind', 
+            icon: faBackward, 
+            id: useId(), 
+            images: null, 
+            press: playerContext.rewind, 
+            pressValue: null,
+            active: null
+        },
+        {
+            label: 'Play', 
+            icon: faPlay, 
+            id: useId(), 
+            images: null, 
+            press: playerContext.createSequence, 
+            pressValue: null,
+            active: {
+                state: 'status', 
+                value: 'play'
+            }
+        },
+        {
+            label: 'Stop', 
+            icon: faStop, 
+            id: useId(),
+            images: null, 
+            press: playerContext.stop, 
+            pressValue: null,
+            active: {
+                state:  'status', 
+                value: 'stop'
+            }
+        },
+        {
+            label: 'Loop', 
+            icon: faRepeat, 
+            id: useId(), 
+            images: null, 
+            press: playerContext.toggleLoop, 
+            pressValue: null,
+            active: {
+                state: 'loopEnable', 
+                value: true
+            }
+        },
+        {
+            label: 'Metronome', 
+            icon: faBell, 
+            id: useId(), 
+            images: null, 
+            press: playerContext.toggleMetronome, 
+            pressValue: null,
+            active: {
+                state: 'metronomeEnable', 
+                value: true
+            }
+        }
     ]
-
-    console.log('playerContext.status = ',playerContext.status)
 
     return (
         <motion.div

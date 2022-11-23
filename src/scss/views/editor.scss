@@ -111,7 +111,6 @@
     width: 100%;
     height: 6%;
     background-color: transparent;
-
 }
 .editor-sheet-measure-line, .editor-sheet-measure-line-ledger {
     width: 100%;
@@ -161,6 +160,7 @@
 .editor-button {
     background-color: transparent;
     border: none;
+    outline: none;
     margin-bottom: 1.5vh;
     border-bottom: 1px solid theme.$button-grey;
     padding-bottom: 1.5vh;

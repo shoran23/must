@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 
 import Measure from './Measure'
-import MeasureNew from './MeasureNew'
 
 export default function Sheet(props) {
 
@@ -39,97 +38,97 @@ export default function Sheet(props) {
 
                 <div className='editor-sheet-measure-row'>
                     <div className='editor-sheet-measure-divider'/>
-                    <MeasureNew/>
+                    <Measure/>
                     <div className='editor-sheet-measure-divider'/>
-                    <MeasureNew/>
+                    <Measure/>
                     <div className='editor-sheet-measure-divider'/>
-                    <MeasureNew/>
+                    <Measure/>
                     <div className='editor-sheet-measure-divider'/>
-                    <MeasureNew/>
-                    <div className='editor-sheet-measure-divider'/>
-                </div>
-
-                <div className='editor-sheet-measure-row'>
-                    <div className='editor-sheet-measure-divider'/>
-                    <MeasureNew/>
-                    <div className='editor-sheet-measure-divider'/>
-                    <MeasureNew/>
-                    <div className='editor-sheet-measure-divider'/>
-                    <MeasureNew/>
-                    <div className='editor-sheet-measure-divider'/>
-                    <MeasureNew/>
+                    <Measure/>
                     <div className='editor-sheet-measure-divider'/>
                 </div>
 
                 <div className='editor-sheet-measure-row'>
                     <div className='editor-sheet-measure-divider'/>
-                    <MeasureNew/>
+                    <Measure/>
                     <div className='editor-sheet-measure-divider'/>
-                    <MeasureNew/>
+                    <Measure/>
                     <div className='editor-sheet-measure-divider'/>
-                    <MeasureNew/>
+                    <Measure/>
                     <div className='editor-sheet-measure-divider'/>
-                    <MeasureNew/>
-                    <div className='editor-sheet-measure-divider'/>
-                </div>
-
-                <div className='editor-sheet-measure-row'>
-                    <div className='editor-sheet-measure-divider'/>
-                    <MeasureNew/>
-                    <div className='editor-sheet-measure-divider'/>
-                    <MeasureNew/>
-                    <div className='editor-sheet-measure-divider'/>
-                    <MeasureNew/>
-                    <div className='editor-sheet-measure-divider'/>
-                    <MeasureNew/>
+                    <Measure/>
                     <div className='editor-sheet-measure-divider'/>
                 </div>
 
                 <div className='editor-sheet-measure-row'>
                     <div className='editor-sheet-measure-divider'/>
-                    <MeasureNew/>
+                    <Measure/>
                     <div className='editor-sheet-measure-divider'/>
-                    <MeasureNew/>
+                    <Measure/>
                     <div className='editor-sheet-measure-divider'/>
-                    <MeasureNew/>
+                    <Measure/>
                     <div className='editor-sheet-measure-divider'/>
-                    <MeasureNew/>
-                    <div className='editor-sheet-measure-divider'/>
-                </div>
-
-                <div className='editor-sheet-measure-row'>
-                    <div className='editor-sheet-measure-divider'/>
-                    <MeasureNew/>
-                    <div className='editor-sheet-measure-divider'/>
-                    <MeasureNew/>
-                    <div className='editor-sheet-measure-divider'/>
-                    <MeasureNew/>
-                    <div className='editor-sheet-measure-divider'/>
-                    <MeasureNew/>
+                    <Measure/>
                     <div className='editor-sheet-measure-divider'/>
                 </div>
 
                 <div className='editor-sheet-measure-row'>
                     <div className='editor-sheet-measure-divider'/>
-                    <MeasureNew/>
+                    <Measure/>
                     <div className='editor-sheet-measure-divider'/>
-                    <MeasureNew/>
+                    <Measure/>
                     <div className='editor-sheet-measure-divider'/>
-                    <MeasureNew/>
+                    <Measure/>
                     <div className='editor-sheet-measure-divider'/>
-                    <MeasureNew/>
+                    <Measure/>
                     <div className='editor-sheet-measure-divider'/>
                 </div>
 
                 <div className='editor-sheet-measure-row'>
                     <div className='editor-sheet-measure-divider'/>
-                    <MeasureNew/>
+                    <Measure/>
                     <div className='editor-sheet-measure-divider'/>
-                    <MeasureNew/>
+                    <Measure/>
                     <div className='editor-sheet-measure-divider'/>
-                    <MeasureNew/>
+                    <Measure/>
                     <div className='editor-sheet-measure-divider'/>
-                    <MeasureNew/>
+                    <Measure/>
+                    <div className='editor-sheet-measure-divider'/>
+                </div>
+
+                <div className='editor-sheet-measure-row'>
+                    <div className='editor-sheet-measure-divider'/>
+                    <Measure/>
+                    <div className='editor-sheet-measure-divider'/>
+                    <Measure/>
+                    <div className='editor-sheet-measure-divider'/>
+                    <Measure/>
+                    <div className='editor-sheet-measure-divider'/>
+                    <Measure/>
+                    <div className='editor-sheet-measure-divider'/>
+                </div>
+
+                <div className='editor-sheet-measure-row'>
+                    <div className='editor-sheet-measure-divider'/>
+                    <Measure/>
+                    <div className='editor-sheet-measure-divider'/>
+                    <Measure/>
+                    <div className='editor-sheet-measure-divider'/>
+                    <Measure/>
+                    <div className='editor-sheet-measure-divider'/>
+                    <Measure/>
+                    <div className='editor-sheet-measure-divider'/>
+                </div>
+
+                <div className='editor-sheet-measure-row'>
+                    <div className='editor-sheet-measure-divider'/>
+                    <Measure/>
+                    <div className='editor-sheet-measure-divider'/>
+                    <Measure/>
+                    <div className='editor-sheet-measure-divider'/>
+                    <Measure/>
+                    <div className='editor-sheet-measure-divider'/>
+                    <Measure/>
                     <div className='editor-sheet-measure-divider'/>
                 </div>
 

@@ -20,6 +20,7 @@ class PlayerProvider extends React.Component {
             sampler: new Sampler().toDestination(),
             loopEnable: false,
             metronomeEnable: false,
+            selectedNote: null,
             handleState: this.handleState,
             startFromBeginning: this.startFromBeginning,
             rewind: this.rewind,
@@ -65,6 +66,7 @@ class PlayerProvider extends React.Component {
 
 
     loopTest = () => {
+        this.setState({status: 'play'})
         const synth = new Synth().toDestination();
         const seq = new Sequence((time, note) => {
             synth.triggerAttackRelease(note, 0.1, time);

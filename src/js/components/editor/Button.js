@@ -22,9 +22,20 @@ export default function Button(props) {
         if(props.context !== null) {
             if(props.button.active !== null) {
                 if(props.context[props.button.active.state] === props.button.active.value) {
-                    setColor('#18D0E8')
+                    if(props.button.icon !== null) {
+                        setColor('#18D0E8')
+                    }
+                    if(props.button.images !== null) {
+                        setImage(props.button.images.active)
+                    }
+
                 } else {
-                    setColor('white')
+                    if(props.button.icon !== null) {
+                        setColor('white')
+                    }
+                    if(props.button.images !== null) {
+                        setImage(props.button.images.inactive)
+                    }
                 }
             }
         }
@@ -35,7 +46,13 @@ export default function Button(props) {
             style={{
                 borderBottom: borderBottom
             }}
-            onClick={props.button.press}
+            onClick={() => {
+                if(props.button.pressValue === null){
+                    props.button.press()
+                } else {
+                    props.button.press(props.button.pressValue)
+                }
+            }}
         >
             {props.button.icon !== null ?
                 <FontAwesomeIcon icon={props.button.icon} color={color} fontSize={42}/>
