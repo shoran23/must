@@ -16,6 +16,12 @@ export const test = {
             timeSignature: [4,4],
             key: 'C',
             beats: [['C4'],['B4', 'B4'],['D4','D4','D4','D4'],['G4']]
+        },
+        {
+            clef: 'treble',
+            timeSignature: [4,4],
+            key: 'C',
+            beats: [['C4'],['B4', 'B4'],['D4','D4','D4','D4'],['G4']]
         }
     ]
 }

@@ -74,6 +74,8 @@
     font-size: 18px;
     font-weight: bold;
 }
+
+
 .editor-sheet-measure-row {
     width: 100%;
     aspect-ratio: 4;
@@ -83,9 +85,30 @@
     justify-content: flex-start;
     align-items: center;
 }
+
+.editor-sheet-measure-container {
+    width: '100%';
+    aspect-ratio: 0.96;
+    display: grid;
+    grid-template-rows: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
+    grid-template-columns: auto auto auto auto;
+
+    background-color: lime;
+}
+
+
 .editor-sheet-measure {
-    width: 25%;
+    width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.editor-sheet-measure-center {
+    width: 100%;
+    height: 100%;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -104,8 +127,6 @@
     align-items: center;
     overflow: visible;
     position: relative;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
 }
 .editor-sheet-measure-space, .editor-sheet-measure-space-ledger {
     width: 100%;
