@@ -31,6 +31,14 @@ class PlayerProvider extends React.Component {
     handleState = (key, value) => {
         this.setState({[key]: value})
     }
+
+    playNote = (note,index) => {
+        setTimeout(() => {
+            this.state.synth.triggerAttackRelease(note.note, note.duration)
+        },1000 * index)
+    }
+
+
     startFromBeginning = () => {
         console.log('player, play from beginning')
     }
@@ -40,6 +48,13 @@ class PlayerProvider extends React.Component {
     play = () => {
         console.log('player, start')
         this.setState({status: 'play'})
+        for(const measure of this.state.music.measures) {
+            for(const [beatIndex,beat] of measure.beats.entries()) {
+                for(const note of beat.notes) {           
+                    this.playNote(note,beatIndex)
+                }
+            }
+        }
     }
     stop = () => {
         console.log('player, stop')
@@ -55,11 +70,6 @@ class PlayerProvider extends React.Component {
 
 
     render() {
-
-        console.log('music = ',this.state.music)
-
-        console.log('test = ',test)
-
         return (
             <PlayerContext.Provider value={{...this.state}}>
                 {this.props.children}

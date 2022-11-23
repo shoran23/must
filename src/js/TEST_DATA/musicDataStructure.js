@@ -7,11 +7,11 @@ export const test = {
             clef: 'treble',
             timeSignature: [4,4],
             key: 'C',
-            notes: [
-                [{note: 'C#4', duration: '1n'}],
-                [{note: 'D4', duration: '1n'}],
-                [{note: 'D#4', duration: '1n'}],
-                [{note: 'E4', duration: '1n'}],
+            beats: [
+                {notes: [{note: 'C#4', duration: '2n'}]} ,
+                {notes: [{note: 'D4', duration: '2n'}]},
+                {notes: [{note: 'D#4', duration: '2n'}]},
+                {notes: [{note: 'E4', duration: '2n'}]},
             ]
         }
     ]
