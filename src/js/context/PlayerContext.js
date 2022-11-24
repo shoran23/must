@@ -21,6 +21,7 @@ class PlayerProvider extends React.Component {
             loopEnable: false,
             metronomeEnable: false,
             selectedNote: null,
+            selectedMeasureIndex: null,
             handleState: this.handleState,
             startFromBeginning: this.startFromBeginning,
             rewind: this.rewind,
@@ -98,6 +99,9 @@ class PlayerProvider extends React.Component {
 
 
     render() {
+
+        console.log('selectedMeasureIndex = ',this.state.selectedMeasureIndex)
+
         return (
             <PlayerContext.Provider value={{...this.state}}>
                 {this.props.children}

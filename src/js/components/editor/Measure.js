@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 
 import clefs from '../../constants/clefs'
 
@@ -12,10 +12,14 @@ export default function Measure(props) {
         
     }
 
+    useEffect(() => {
+
+    },[props.measure])        
+
     console.log('measure = ',props.measure)
 
     return (
-        <div className='editor-sheet-measure'>
+        <div className='editor-sheet-measure' onClick={() => playerContext.handleState('selectedMeasureIndex',props.index)}>
             <div className='editor-sheet-measure-divider'/>
             <div className='editor-sheet-measure-center'>
                 {clef.notes.map((note, index) => (
